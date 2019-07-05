@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width">
+	<title>MODARAMA</title>
+	<link rel="stylesheet" href="fonts/font-awesome-4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.stellar.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/flickrush.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.countdown.js"></script>
+	<script src="js/fluidvids.js"></script>
+	<script src="js/retina-1.1.0.min.js"></script>
+	<script src="js/jquery.resizestop.min.js"></script>
+
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<!--HEADER-->
+	<header>
+		<div class="container">
+			<a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+			<!--MENU-->
+			<nav class="clearfix">
+				<a href="" id="header-menu-button"><i class="fa fa-bars"></i></a>  
+				<ul class="list-inline">
+					<li class="dropdown-submenu"><a href="">Home</a>
+						<ul class="dropdown-menu">
+							<li><a href="index.html">Home 1</a></li>
+							<li><a href="index2.html">Home 2 (grid)</a></li>
+							<li><a href="index3.html">Home 3 (list)</a></li>
+						</ul>
+					</li>
+					<li><a href="shortcodes.html">Shortcodes</a></li>
+					<li class="dropdown-submenu"><a href="">Pages</a>
+						<ul class="dropdown-menu">
+							<li><a href="search-result.html">Search results</a></li>
+							<li><a href="author.html">Author page</a></li>
+							<li><a href="#">Error404</a></li>
+							<li><a href="coming.html">Coming soon</a></li>
+							<li><a href="travel.html">Category page (grid)</a></li>
+							<li><a href="fashion.html">Category page (list)</a></li>
+							<li><a href="video-post.html">Post with video</a></li>
+							<li><a href="slider-post.html">Post with slider</a></li>
+							<li><a href="small-post.html">Post</a></li>
+							<li><a href="fullwidth-post-right.html">Post fullwidth with sidebar</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="#login" data-toggle="modal">Login</a></li>
+					<li><a href="http://themeforest.net/item/modarama-magazine-html5-template/6532785?ref=Pryanikov">Purchase</a></li>
+				</ul>
+			</nav>
+			<!--END MENU-->
+		</div>
+	</header>
+	<!--END HEADER-->
+
+	<!--LOGIN FORM-->
+	<div id="login" class="modal fade">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+			  	<div class="modal-header">
+			    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			    	<h3>Login</h3>
+			 	</div>
+			  	<div class="modal-body">
+			    	<form>
+			    		<div class="input-group input-block">
+						  	<span class="input-group-addon">
+						  		<i class="fa fa-user"></i>
+						  	</span>
+						  	<input type="text" class="form-control" name="username" id="username-login" placeholder="Username" required>
+						</div>
+						<div class="input-group">
+						  	<span class="input-group-addon">
+						  		<i class="fa fa-lock"></i>
+						  	</span>
+						  	<input type="password" class="form-control" name="password" id="password-login" placeholder="Password" required>
+						</div>
+			    		<input class="btn btn-default btn-block" type="submit" value="Login">
+			    	</form>
+			    	<a href="">Lost your password?</a>
+			  	</div>
+			  	<div class="modal-footer">
+			    	<p>Not a member? <a href="#register" data-toggle="modal">Register</a></p>
+			 	</div>
+			</div>
+		</div>
+	</div>
+	<!--END LOGIN FORM-->
+
+	<!--REGISTER FORM-->
+	<div id="register" class="modal fade">
+	  	<div class="modal-dialog">
+	        <div class="modal-content">
+	          	<div class="modal-header">
+	            	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	            	<h3>Register</h3>
+	        	</div>
+		  		<div class="modal-body">
+	            	<form>
+	              		<div class="input-group input-block">
+	                		<span class="input-group-addon">
+	                  			<i class="fa fa-user"></i>
+	                		</span>
+	                		<input type="text" class="form-control" name="username" id="username-register" placeholder="Username" required>
+	            		</div>
+	            		<div class="input-group">
+	                		<span class="input-group-addon">
+	                 			<i class="fa fa-lock"></i>
+	                		</span>
+	                		<input type="password" class="form-control" name="password" id="password-register" placeholder="Password" required>
+	            		</div>
+	              		<input class="btn btn-default btn-block" type="submit" value="Register">
+		    		</form>
+		    		<p>A password will be e-mailed to you.</p>
+		  		</div>
+		  	</div>
+		</div>
+	</div>
+	<!--REGISTER FORM-->
+
+	<!--CONTAINER-->
+	<div class="container">
+		<!--MENU-->
+		<nav class="clearfix">
+			<a href="" id="menu-button"><i class="fa fa-bars"></i></a>  
+			<ul class="menu col-md-9 list-inline">
+				<li><a href="fashion.html">Fashion</a></li>
+				<li class="dropdown-submenu">
+					<a href="travel.html">Science</a>
+					<ul class="dropdown-menu">
+						<li><a href="">Physics</a></li>
+						<li class="dropdown-submenu">
+							<a href="">Mathematics</a>
+							<ul class="dropdown-menu">
+								<li><a href="">Physics</a></li>
+								<li><a href="">Mathematics</a></li>
+								<li><a href="">Astronomy</a></li>
+							</ul>
+						</li>
+						<li><a href="">Astronomy</a></li>
+						<li><a href="">Astrophysics</a></li>
+						<li><a href="">Ufology</a></li>
+					</ul>
+				</li>
+				<li><a href="fashion.html">Industry</a></li>
+				<li><a href="travel.html">Inspiration</a></li>
+				<li class="dropdown-submenu">
+					<a href="fashion.html">Music</a>
+					<ul class="dropdown-menu">
+						<li><a href="">Physics</a></li>
+						<li><a href="">Mathematics</a></li>
+						<li><a href="">Astronomy</a></li>
+						<li><a href="">Astrophysics</a></li>
+						<li><a href="">Ufology</a></li>
+					</ul>
+				</li>
+				<li><a href="travel.html">Movies & Stars</a></li>
+				<li><a href="fashion.html">Lifestyle</a></li>
+				<li><a href="travel.html">Travel</a></li>
+			</ul>
+			<form class="form-search col-md-3">
+				<div class="input-group">
+					<input type="text" class="search-query form-control" placeholder="Search smth">
+	      			<span class="input-group-btn">
+	        			<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+	      			</span>
+			  	</div>
+			</form>
+		</nav>
+		<!--END MENU-->
+
+		<!--MAIN SECTION-->
+		<div class="main-404 clearfix">
+			<img src="img/404.jpg" alt="404">
+			<div class="info-404">
+				<h1>
+					<span>404.</span>
+					<small>That's an error.</small>
+				</h1>
+				<p>
+					The requested URL /URL was not found on this server. That’s all we know.
+				</p>
+			</div>
+		</div>
+		<!--END MAIN SECTION-->
+		<!--FOOTER-->		
+		<footer>
+			<div class="row">
+				<div class="about col-md-3 col-sm-6">
+					<img src="img/about-logo.png" alt="logo">
+					<h5>About Modarama fashion magazine</h5>
+					<p>
+						This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+					</p>
+
+					<ul class="social list-inline">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+						<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+						<li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+						<li><a href="#"><i class="fa  fa-tumblr"></i></a></li>
+						<li><a href="#"><i class="fa fa-rss"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="categories col-md-3 col-sm-6">
+					<h5>Categories</h5>
+					<ul>
+						<li><a href="#">Fashion (13)</a></li>
+						<li><a href="#">Science (23)</a></li>
+						<li><a href="#">Lifestyle (781)</a></li>
+						<li><a href="#">Industry (14)</a></li>
+						<li><a href="#">Inspiration (3)</a></li>
+						<li><a href="#">Music (5)</a></li>
+						<li><a href="#">Movies & Stars (32)</a></li>
+					</ul>
+				</div>
+
+				<div class="events col-md-3 col-sm-6">
+					<h5>Events</h5>
+					<div class="event">
+						<div class="col">
+							<h1><a href="">21</a></h1>
+							<p>nov</p>
+						</div>
+						<div class="info">
+							<h2><a href="">Party monster 1954</a></h2>
+							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit .</p>
+						</div>
+					</div>
+					<div class="event">
+						<div class="col">
+							<h1><a href="">17</a></h1>
+							<p>nov</p>
+						</div>
+						<div class="info">
+							<h2><a href="">Party monster 1954</a></h2>
+							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit .</p>
+						</div>
+					</div>
+					<div class="event">
+						<div class="col">
+							<h1><a href="">25</a></h1>
+							<p>nov</p>
+						</div>
+						<div class="info">
+							<h2><a href="">Party monster 1954</a></h2>
+							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit .</p>
+						</div>
+					</div>					
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<h5>Calendar</h5>
+					<div class="calendar">
+						<div class="header clearfix">
+							<h1>November 2013</h1>
+							<div class="calendar-nav">
+								<a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
+								<a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+						<div class="calendar-body">
+							<table>
+								<tr>
+									<td><a href="" class="prev-month">30</a></td>
+									<td><a href="" class="prev-month">31</a></td>
+									<td><a href="">1</a></td>
+									<td><a href="">2</a></td>
+									<td><a href="">3</a></td>
+									<td><a href="">4</a></td>
+									<td><a href="">5</a></td>
+								</tr>
+								<tr>
+									<td><a href="">6</a></td>
+									<td><a href="">7</a></td>
+									<td><a href="">8</a></td>
+									<td><a href="">9</a></td>
+									<td><a href="">10</a></td>
+									<td><a href="">11</a></td>
+									<td><a href="">12</a></td>
+								</tr>
+								<tr>
+									<td><a href="">13</a></td>
+									<td><a href="">14</a></td>
+									<td><a href="">15</a></td>
+									<td><a href="">16</a></td>
+									<td><a href="">17</a></td>
+									<td><a href="">18</a></td>
+									<td><a href="">19</a></td>
+								</tr>
+								<tr>
+									<td><a href="">20</a></td>
+									<td><a href="">21</a></td>
+									<td><a href="">22</a></td>
+									<td><a href="">23</a></td>
+									<td><a href="">24</a></td>
+									<td><a href="">25</a></td>
+									<td><a href="">26</a></td>
+								</tr>
+								<tr>
+									<td><a href="">27</a></td>
+									<td><a href="">28</a></td>
+									<td><a href="">29</a></td>
+									<td><a href="">30</a></td>
+									<td><a href="" class="next-month">1</a></td>
+									<td><a href="" class="next-month">2</a></td>
+									<td><a href="" class="next-month">3</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="rights clearfix">
+				<p>© 2013 All rights reserved.</p>
+				<p>Designed by <a href="http://themeforest.net/user/Pryanikov">Pryanik</a>.</p>
+			</div>
+		</footer>
+		<!--END FOOTER-->
+	</div>
+	<!--END CONTAINER-->
+</body>
+</html>
+
+
