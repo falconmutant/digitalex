@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.contrib.postgres.search import SearchVectorField
 from django.contrib.postgres.fields import JSONField
 
-
 # Create your models here.
 
 
@@ -34,7 +33,7 @@ class Tag(models.Model):
 
 class Post(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	created = models.DateField()
+	created = models.DateField(auto_now_add=True, blank=True)
 	name = models.TextField()
 	description = models.TextField()
 	category = models.ForeignKey(Category, on_delete=models.CASCADE)

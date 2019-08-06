@@ -251,8 +251,8 @@ class Maya:
     def validate(data, model):
         result = model.objects.filter(**data)
         if result.count() > 0:
-            return False
-        return True
+            return False, result
+        return True, None
 
     @transaction.atomic
     def add(self):
@@ -269,8 +269,9 @@ class Maya:
         else:
             valid = True
             if 'validate' in self.request.data:
-                valid = self.validate(self.request.data['validate'], self.model)
+                valid, data = self.validate(self.request.data['validate'], self.model)
             if valid:
+                self.data['user'] = self.request.user.id
                 response, _status = self.depth_transaction(self.data, self.model)
                 try:
                     if 'MayaMessage' in response:
@@ -282,8 +283,9 @@ class Maya:
                 return {
                            'MayaMessage': 'Validation not passed, data not saved',
                            'validate': self.request.data['validate'],
-                           'data': self.data
-                       }, status.HTTP_401_UNAUTHORIZED
+                           'data': self.data,
+                           'result': Serializer(data.first(), fields=self.fields, model=self.model).data
+                       }, status.HTTP_200_OK
 
     def delete(self):
         model = self.model.objects.filter(id__in=self.data['id'])

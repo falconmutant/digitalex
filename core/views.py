@@ -2,7 +2,8 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-from core.genesis import Maya
+from core.genesis import Maya, Serializer
+from core.models import Media
 
 
 class GenesisRest(APIView):
@@ -21,6 +22,14 @@ class GenesisRest(APIView):
 			genesis = Maya(request)
 			data, _status = genesis.handler()
 			return Response(data, status=_status)
+
+
+class MediaRest(APIView):
+	def post(self, request):
+		media = Media(file=request.data['file'])
+		media.save()
+		data = Serializer(media, model=Media).data
+		return Response(data, status=status.HTTP_200_OK)
 
 
 class GenesisAPI(APIView):
